@@ -1,7 +1,10 @@
-
 # BNotify – Bengali Notification Transliterator & Transmitter
 
-**Make your Bangla notifications readable on any smartwatch.**
+\<p align="center">   \<img src="assets/logo.png" alt="BNotify Logo" width="180"/> \</p>
+
+\<p align="center">   \<strong>Make your Bangla notifications readable on any smartwatch.\</strong> \</p>
+
+\<p align="center">   \<img src="[https://img.shields.io/badge/Android-App-green?logo=android](https://img.shields.io/badge/Android-App-green?logo=android)" alt="Android App"/>   \<img src="[https://img.shields.io/badge/Version-1.2-blue](https://img.shields.io/badge/Version-1.2-blue)" alt="Version 1.2"/>   \<img src="[https://img.shields.io/badge/Language-Bangla%20%7C%20English-orange](https://img.shields.io/badge/Language-Bangla%20%7C%20English-orange)" alt="Languages"/> \</p>
 
 BNotify is an Android application designed to overcome Bengali notification compatibility limitations on smartwatches and smart bands that cannot properly display Bangla (Bengali Unicode) characters.
 
@@ -9,8 +12,7 @@ It intercepts notifications from selected applications, converts Bengali text in
 
 The result? Read your Bangla messages on devices that otherwise display broken characters, empty boxes, or unsupported glyphs.
 
-**Idea & Concept:** xelsk  
-**AI Assistance:** Developed with assistance from Google Gemini.
+**Idea & Concept:** xelsk
 
 ---
 
@@ -21,7 +23,9 @@ The result? Read your Bangla messages on devices that otherwise display broken c
 - [Use Cases](#use-cases)
 - [How It Works](#how-it-works)
 - [Features](#features)
+- [What's New in v1.2](#whats-new-in-v12)
 - [Getting Started](#getting-started)
+- [First Launch & Permission Setup](#first-launch--permission-setup)
 - [User Guide](#user-guide)
 - [Transliteration Modes](#transliteration-modes)
 - [Custom Dictionary](#custom-dictionary)
@@ -30,7 +34,6 @@ The result? Read your Bangla messages on devices that otherwise display broken c
 - [Limitations](#limitations)
 - [Contributing](#contributing)
 - [Acknowledgements](#acknowledgements)
-- [License](#license)
 
 ---
 
@@ -56,12 +59,12 @@ BNotify acts as a bridge between your Android smartphone and your smartwatch.
 
 Instead of sending the original Bengali notification to your watch, BNotify creates a new notification containing its Romanized Bangla equivalent.
 
-| Original Notification | BNotify Notification |
-|---|---|
-| তুমি কেমন আছো? | Tumi kemon acho? |
-| আমি বাসায় আছি। | Ami bashay achi. |
-| তোমাকে ধন্যবাদ। | Tomake dhonnobad. |
-| বাংলাদেশ আমার দেশ। | Bangladesh amar desh. |
+| Original Notification | BNotify Notification  |
+| --------------------- | --------------------- |
+| তুমি কেমন আছো?        | Tumi kemon acho?      |
+| আমি বাসায় আছি।       | Ami bashay achi.      |
+| তোমাকে ধন্যবাদ।       | Tomake dhonnobad.     |
+| বাংলাদেশ আমার দেশ।    | Bangladesh amar desh. |
 
 Since the converted text uses standard Latin characters, it can be displayed on virtually any smartwatch that supports ordinary English notifications.
 
@@ -76,9 +79,11 @@ BNotify is useful for anyone who receives Bengali notifications on a wearable de
 ### 1. Reading Bangla WhatsApp Messages
 
 **Original:**
+
 > আজকে কখন আসবে? তোমার জন্য অপেক্ষা করছি।
 
 **On your smartwatch:**
+
 > [WhatsApp] Ajke kokhon ashbe? Tomar jonno opekkha korchi.
 
 ### 2. Messenger and Social Media Notifications
@@ -114,41 +119,41 @@ BNotify uses Android's Notification Listener Service to receive notifications fr
 The notification text is processed locally through the transliteration engine and then retransmitted as a new Android notification.
 
 ```text
-        Original App
-   (WhatsApp / Messenger / SMS)
-               |
-               v
-    Android Notification System
-               |
-               v
-    BNotify Notification Listener
-               |
-               v
-       Transliteration Engine
-               |
-        +------+------+
-        |             |
-        v             v
-    Auto Mode     Direct Mode
-        |             |
-   Dictionary      Avro Rules
-        |             |
-   Avro Fallback       |
-        |             |
-        +------+------+
-               |
-               v
-     Processed Notification
-       [WhatsApp] Message
-               |
-               v
-      Android Notification
-               |
-               v
-       Companion Application
-               |
-               v
-           Smartwatch
+       Original App
+  (WhatsApp / Messenger / SMS)
+              |
+              v
+   Android Notification System
+              |
+              v
+   BNotify Notification Listener
+              |
+              v
+      Transliteration Engine
+              |
+       +------+------+
+       |             |
+       v             v
+   Auto Mode     Direct Mode
+       |             |
+   Dictionary     Avro Rules
+       |
+   Avro Fallback
+       |             |
+       +------+------+
+              |
+              v
+    Processed Notification
+      [WhatsApp] Message
+              |
+              v
+     Android Notification
+              |
+              v
+      Companion Application
+              |
+              v
+          Smartwatch
 ```
 
 The smartwatch receives an ordinary Latin-script notification instead of the original Bengali text.
@@ -208,6 +213,28 @@ The transliteration workflow is designed to retain non-Bengali content and make 
 
 ---
 
+## What's New in v1.2
+
+**BNotify v1.2 introduces several improvements to the application and its dictionary.**
+
+### Latest Dictionary Preloaded
+
+The latest updated Bangla-to-Latin dictionary is now included with the application.
+
+- Updated transliterations.
+- Fixed several incorrect Bangla-to-Latin entries.
+- Improved conventional and commonly used Roman Bangla spellings.
+
+You no longer need to manually import the latest dictionary to benefit from these updates.
+
+### Minor Improvements
+
+- Several minor application improvements and refinements.
+- Changes to the logo background.
+- General usability and experience improvements.
+
+---
+
 ## Getting Started
 
 ### Requirements
@@ -216,19 +243,90 @@ The transliteration workflow is designed to retain non-Bengali content and make 
 - A compatible smartwatch or smart band.
 - The manufacturer's companion application installed and configured.
 - Notification access enabled for BNotify.
+- Permission to post notifications.
 - Background activity permitted by Android.
 
 ### Installation
 
 1. Download and install the latest available BNotify APK.
-2. Open BNotify and complete the initial setup.
-3. Grant the permissions requested by the application.
+2. Open BNotify.
+3. Complete the initial permission setup.
+4. Configure your preferred applications and transliteration settings.
+
+---
+
+## First Launch & Permission Setup
+
+**BNotify requires three important permissions/settings to function correctly.**
+
+During the first launch, make sure you complete all three steps.
+
+### Step 1 – Allow Notification Access
+
+BNotify needs notification access to receive notifications from your selected applications.
+
+1. Open BNotify.
+2. When prompted, navigate to Android's Notification Access settings.
+3. Find **BNotify** in the application list.
+4. Enable Notification Access.
+5. Confirm the permission request.
+
+This allows BNotify to listen to notifications generated by other applications.
+
+### Step 2 – Allow BNotify to Send Notifications
+
+BNotify needs permission to publish its own notifications containing the converted text.
+
+1. Open the **Settings** tab in BNotify.
+2. Find the notification permission option.
+3. Tap it to open the relevant Android settings.
+4. Allow BNotify to send/post notifications.
+
+This permission is separate from Notification Access.
+
+Without it, BNotify may be able to receive and process notifications but cannot properly publish the converted notifications.
+
+### Step 3 – Allow Background Activity
+
+BNotify needs to remain active in the background to process incoming notifications reliably.
+
+1. Open the **Settings** tab in BNotify.
+2. Find the Background Activity option.
+3. Open the relevant Android settings.
+4. Allow background activity or unrestricted battery usage, depending on your device.
+
+Depending on your smartphone manufacturer, you may also need to:
+
+- Set battery usage to **Unrestricted** or **Don't Optimize**.
+- Allow background activity.
+- Enable auto-start or background launch, if available.
+- Avoid manually force-stopping the application.
+
+### Important – Restricted Settings on Newer Android Versions
+
+Some newer Android versions may restrict notification access for applications installed from outside Google Play or other unverified sources.
+
+If Android prevents you from enabling Notification Access, you may need to manually allow restricted settings.
+
+Follow these steps:
+
+1. Open your phone's **Settings**.
+2. Navigate to **Apps → BNotify → App Info**.
+3. Tap the **three-dot menu (⋮)** in the upper-right corner.
+4. Look for **Allow restricted settings**.
+5. Enable it and confirm if prompted.
+6. Return to Notification Access settings.
+7. Enable Notification Access for BNotify.
+
+The exact menu names and availability may vary depending on your Android version and smartphone manufacturer.
+
+**Note:** Only allow restricted settings for applications you trust.
 
 ---
 
 ## User Guide
 
-Follow these steps to configure BNotify.
+After completing the initial permission setup, follow these steps to configure BNotify.
 
 ### Step 1 – Install BNotify
 
@@ -236,31 +334,7 @@ Install the application on your primary Android smartphone (the phone paired wit
 
 Open BNotify after installation.
 
-### Step 2 – Grant Notification Permissions
-
-BNotify requires notification access to read notifications from your selected applications.
-
-- Enable **Notification Access** for BNotify in Android settings.
-- Allow BNotify to post notifications when Android requests notification permission.
-
-These permissions serve different purposes: notification access allows BNotify to receive notifications from other applications, while notification permission allows it to publish the converted notifications.
-
-### Step 3 – Allow Background Activity
-
-Allow BNotify to run in the background.
-
-Depending on your smartphone manufacturer, you may need to:
-
-- Set battery usage to **Unrestricted** or **Don't Optimize**.
-- Allow background activity.
-- Enable auto-start or background launch, if available.
-- Avoid manually force-stopping the application.
-
-The exact settings vary between Samsung, Xiaomi, Redmi, Realme, OPPO, vivo and other Android manufacturers.
-
-This step is important because aggressive battery management can stop notification processing.
-
-### Step 4 – Enable BNotify in Your Watch Companion App
+### Step 2 – Enable BNotify in Your Watch Companion App
 
 Open your smartwatch's official companion application.
 
@@ -278,7 +352,7 @@ For example, depending on your wearable:
 
 Keep the original applications enabled on your smartphone itself. Only adjust their notification forwarding settings in the watch companion application.
 
-### Step 5 – Select Applications in BNotify
+### Step 3 – Select Applications in BNotify
 
 Open the **Apps** page in BNotify.
 
@@ -295,7 +369,7 @@ For example:
 
 Only enable the applications you actually need.
 
-### Step 6 – Choose Your Transliteration Mode
+### Step 4 – Choose Your Transliteration Mode
 
 Open Settings and select your preferred transliteration mode.
 
@@ -304,7 +378,7 @@ Open Settings and select your preferred transliteration mode.
 
 You can also configure the notification aggregation option and other available settings.
 
-### Step 7 – Test Your Smartwatch
+### Step 5 – Test Your Smartwatch
 
 Send yourself a Bengali message from another device.
 
@@ -350,6 +424,8 @@ You can use either:
 
 1. The default dictionary included with BNotify.
 2. Your own custom dictionary hosted online.
+
+**Version 1.2 already includes the latest updated dictionary.** Manual importing is optional.
 
 ### Importing a Custom Dictionary
 
@@ -445,16 +521,18 @@ Remote dictionary importing requires an internet connection and access to the se
 
 ## Troubleshooting
 
-| Problem | Possible Solution |
-|---|---|
-| No notifications on the watch | Enable BNotify in the companion app |
-| Original Bangla notification still appears | Disable original app forwarding in the companion app |
-| BNotify stops working | Allow background activity and unrestricted battery usage |
-| Some applications are not processed | Check the Apps page and notification access |
-| Notifications arrive inconsistently | Check battery optimization and background restrictions |
-| Dictionary import fails | Verify the raw URL and CSV/JSON structure |
-| Some words are transliterated incorrectly | Try Auto mode or improve the custom dictionary |
-| Duplicate notifications appear | Review original app forwarding and notification aggregation settings |
+| Problem                                    | Possible Solution                                                    |
+| ------------------------------------------ | -------------------------------------------------------------------- |
+| No notifications on the watch              | Enable BNotify in the companion app                                  |
+| Original Bangla notification still appears | Disable original app forwarding in the companion app                 |
+| BNotify stops working                      | Allow background activity and unrestricted battery usage             |
+| Notification Access cannot be enabled      | Check App Info → Three-dot menu → Allow restricted settings          |
+| BNotify notifications are not appearing    | Allow notification posting permission in BNotify Settings            |
+| Some applications are not processed        | Check the Apps page and notification access                          |
+| Notifications arrive inconsistently        | Check battery optimization and background restrictions               |
+| Dictionary import fails                    | Verify the raw URL and CSV/JSON structure                            |
+| Some words are transliterated incorrectly  | Try Auto mode or improve the custom dictionary                       |
+| Duplicate notifications appear             | Review original app forwarding and notification aggregation settings |
 
 ---
 
@@ -496,12 +574,34 @@ If you encounter an issue, please provide:
 
 ## Acknowledgements
 
+Special thanks to the tools and communities that helped make BNotify possible.
+
 - **Avro Phonetic:** For the phonetic transliteration approach.
-- **Google Gemini:** AI development assistance.
 - **Android:** Notification Listener and notification infrastructure.
 - **Open-source community:** For tools, ideas and inspiration.
 
+### AI Assistance
+
+BNotify was developed with assistance from AI tools:
+
+\<p align="center">
+&#x20; \<a href="[https://gemini.google.com/](https://gemini.google.com/)">
+&#x20;   \<img src="[https://img.shields.io/badge/Google%20Gemini-AI%20Assistance-8E75B2?logo=googlegemini&logoColor=white](https://img.shields.io/badge/Google%20Gemini-AI%20Assistance-8E75B2?logo=googlegemini\&logoColor=white)" alt="Google Gemini"/>
+&#x20; \</a>
+&#x20; \<a href="[https://chatgpt.com/](https://chatgpt.com/)">
+&#x20;   \<img src="[https://img.shields.io/badge/ChatGPT-AI%20Assistance-10A37F?logo=openai&logoColor=white](https://img.shields.io/badge/ChatGPT-AI%20Assistance-10A37F?logo=openai\&logoColor=white)" alt="ChatGPT"/>
+&#x20; \</a>
+&#x20; \<a href="[https://duck.ai/](https://duck.ai/)">
+&#x20;   \<img src="[https://img.shields.io/badge/Duck.ai-AI%20Assistance-DE5833?logo=duckduckgo&logoColor=white](https://img.shields.io/badge/Duck.ai-AI%20Assistance-DE5833?logo=duckduckgo\&logoColor=white)" alt="Duck.ai"/>
+&#x20; \</a>
+\</p>
 
 ---
 
-**BNotify – Bringing Bangla notifications to your wrist, one message at a time.**
+\<p align="center">
+&#x20; \<strong>BNotify – Bringing Bangla notifications to your wrist, one message at a time.\</strong>
+\</p>
+
+\<p align="center">
+&#x20; Made with ❤️ and a little help from AI.
+\</p>

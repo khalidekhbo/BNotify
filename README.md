@@ -1,10 +1,18 @@
 # BNotify – Bengali Notification Transliterator & Transmitter
 
-\<p align="center">   \<img src="assets/logo.png" alt="BNotify Logo" width="180"/> \</p>
+<p align="center">
+  <img src="assets/logo.png" alt="BNotify Logo" width="180"/>
+</p>
 
-\<p align="center">   \<strong>Make your Bangla notifications readable on any smartwatch.\</strong> \</p>
+<p align="center">
+  <strong>Make your Bangla notifications readable on any smartwatch.</strong>
+</p>
 
-\<p align="center">   \<img src="[https://img.shields.io/badge/Android-App-green?logo=android](https://img.shields.io/badge/Android-App-green?logo=android)" alt="Android App"/>   \<img src="[https://img.shields.io/badge/Version-1.2-blue](https://img.shields.io/badge/Version-1.2-blue)" alt="Version 1.2"/>   \<img src="[https://img.shields.io/badge/Language-Bangla%20%7C%20English-orange](https://img.shields.io/badge/Language-Bangla%20%7C%20English-orange)" alt="Languages"/> \</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Android-App-green?logo=android" alt="Android App"/>
+  <img src="https://img.shields.io/badge/Version-1.2-blue" alt="Version 1.2"/>
+  <img src="https://img.shields.io/badge/Language-Bangla%20%7C%20English-orange" alt="Languages"/>
+</p>
 
 BNotify is an Android application designed to overcome Bengali notification compatibility limitations on smartwatches and smart bands that cannot properly display Bangla (Bengali Unicode) characters.
 
@@ -59,12 +67,12 @@ BNotify acts as a bridge between your Android smartphone and your smartwatch.
 
 Instead of sending the original Bengali notification to your watch, BNotify creates a new notification containing its Romanized Bangla equivalent.
 
-| Original Notification | BNotify Notification  |
-| --------------------- | --------------------- |
-| তুমি কেমন আছো?        | Tumi kemon acho?      |
-| আমি বাসায় আছি।       | Ami bashay achi.      |
-| তোমাকে ধন্যবাদ।       | Tomake dhonnobad.     |
-| বাংলাদেশ আমার দেশ।    | Bangladesh amar desh. |
+| Original Notification | BNotify Notification |
+|---|---|
+| তুমি কেমন আছো? | Tumi kemon acho? |
+| আমি বাসায় আছি। | Ami bashay achi. |
+| তোমাকে ধন্যবাদ। | Tomake dhonnobad. |
+| বাংলাদেশ আমার দেশ। | Bangladesh amar desh. |
 
 Since the converted text uses standard Latin characters, it can be displayed on virtually any smartwatch that supports ordinary English notifications.
 
@@ -139,8 +147,8 @@ The notification text is processed locally through the transliteration engine an
    Dictionary     Avro Rules
        |
    Avro Fallback
-       |             |
-       +------+------+
+       |
+       +-------------+
               |
               v
     Processed Notification
@@ -521,18 +529,18 @@ Remote dictionary importing requires an internet connection and access to the se
 
 ## Troubleshooting
 
-| Problem                                    | Possible Solution                                                    |
-| ------------------------------------------ | -------------------------------------------------------------------- |
-| No notifications on the watch              | Enable BNotify in the companion app                                  |
-| Original Bangla notification still appears | Disable original app forwarding in the companion app                 |
-| BNotify stops working                      | Allow background activity and unrestricted battery usage             |
-| Notification Access cannot be enabled      | Check App Info → Three-dot menu → Allow restricted settings          |
-| BNotify notifications are not appearing    | Allow notification posting permission in BNotify Settings            |
-| Some applications are not processed        | Check the Apps page and notification access                          |
-| Notifications arrive inconsistently        | Check battery optimization and background restrictions               |
-| Dictionary import fails                    | Verify the raw URL and CSV/JSON structure                            |
-| Some words are transliterated incorrectly  | Try Auto mode or improve the custom dictionary                       |
-| Duplicate notifications appear             | Review original app forwarding and notification aggregation settings |
+| Problem | Possible Solution |
+|---|---|
+| No notifications on the watch | Enable BNotify in the companion app |
+| Original Bangla notification still appears | Disable original app forwarding in the companion app |
+| BNotify stops working | Allow background activity and unrestricted battery usage |
+| Notification Access cannot be enabled | Check App Info → Three-dot menu → Allow restricted settings |
+| BNotify notifications are not appearing | Allow notification posting permission in BNotify Settings |
+| Some applications are not processed | Check the Apps page and notification access |
+| Notifications arrive inconsistently | Check battery optimization and background restrictions |
+| Dictionary import fails | Verify the raw URL and CSV/JSON structure |
+| Some words are transliterated incorrectly | Try Auto mode or improve the custom dictionary |
+| Duplicate notifications appear | Review original app forwarding and notification aggregation settings |
 
 ---
 
@@ -584,24 +592,24 @@ Special thanks to the tools and communities that helped make BNotify possible.
 
 BNotify was developed with assistance from AI tools:
 
-\<p align="center">
-&#x20; \<a href="[https://gemini.google.com/](https://gemini.google.com/)">
-&#x20;   \<img src="[https://img.shields.io/badge/Google%20Gemini-AI%20Assistance-8E75B2?logo=googlegemini&logoColor=white](https://img.shields.io/badge/Google%20Gemini-AI%20Assistance-8E75B2?logo=googlegemini\&logoColor=white)" alt="Google Gemini"/>
-&#x20; \</a>
-&#x20; \<a href="[https://chatgpt.com/](https://chatgpt.com/)">
-&#x20;   \<img src="[https://img.shields.io/badge/ChatGPT-AI%20Assistance-10A37F?logo=openai&logoColor=white](https://img.shields.io/badge/ChatGPT-AI%20Assistance-10A37F?logo=openai\&logoColor=white)" alt="ChatGPT"/>
-&#x20; \</a>
-&#x20; \<a href="[https://duck.ai/](https://duck.ai/)">
-&#x20;   \<img src="[https://img.shields.io/badge/Duck.ai-AI%20Assistance-DE5833?logo=duckduckgo&logoColor=white](https://img.shields.io/badge/Duck.ai-AI%20Assistance-DE5833?logo=duckduckgo\&logoColor=white)" alt="Duck.ai"/>
-&#x20; \</a>
-\</p>
+<p align="center">
+  <a href="https://gemini.google.com/">
+    <img src="https://img.shields.io/badge/Google%20Gemini-AI%20Assistance-8E75B2?logo=googlegemini&logoColor=white" alt="Google Gemini"/>
+  </a>
+  <a href="https://chatgpt.com/">
+    <img src="https://img.shields.io/badge/ChatGPT-AI%20Assistance-10A37F?logo=openai&logoColor=white" alt="ChatGPT"/>
+  </a>
+  <a href="https://duck.ai/">
+    <img src="https://img.shields.io/badge/Duck.ai-AI%20Assistance-DE5833?logo=duckduckgo&logoColor=white" alt="Duck.ai"/>
+  </a>
+</p>
 
 ---
 
-\<p align="center">
-&#x20; \<strong>BNotify – Bringing Bangla notifications to your wrist, one message at a time.\</strong>
-\</p>
+<p align="center">
+  <strong>BNotify – Bringing Bangla notifications to your wrist, one message at a time.</strong>
+</p>
 
-\<p align="center">
-&#x20; Made with ❤️ and a little help from AI.
-\</p>
+<p align="center">
+  Made with ❤️ and a little help from AI.
+</p>

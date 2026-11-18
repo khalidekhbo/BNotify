@@ -10,7 +10,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Android-App-green?logo=android" alt="Android App"/>
-  <img src="https://img.shields.io/badge/Version-1.2-blue" alt="Version 1.2"/>
+  <img src="https://img.shields.io/badge/Version-1.21-blue" alt="Version 1.21"/>
   <img src="https://img.shields.io/badge/Language-Bangla%20%7C%20English-orange" alt="Languages"/>
 </p>
 
@@ -20,7 +20,8 @@ It intercepts notifications from selected applications, converts Bengali text in
 
 The result? Read your Bangla messages on devices that otherwise display broken characters, empty boxes, or unsupported glyphs.
 
-**Idea & Concept:** xelsk
+**Creator / Idea:** xelsk  
+**AI Assistance:** Made with help from Google Gemini  
 
 ---
 
@@ -31,7 +32,7 @@ The result? Read your Bangla messages on devices that otherwise display broken c
 - [Use Cases](#use-cases)
 - [How It Works](#how-it-works)
 - [Features](#features)
-- [What's New in v1.2](#whats-new-in-v12)
+- [What's New in v1.21](#whats-new-in-v121)
 - [Getting Started](#getting-started)
 - [First Launch & Permission Setup](#first-launch--permission-setup)
 - [User Guide](#user-guide)
@@ -172,15 +173,15 @@ The smartwatch receives an ordinary Latin-script notification instead of the ori
 
 ### 1. Two Transliteration Modes
 
-Choose between dictionary-assisted transliteration and direct Avro phonetic conversion.
+Choose between high-performance in-memory dictionary-assisted transliteration and direct Avro phonetic conversion.
 
 ### 2. Offline Transliteration
 
 The core transliteration process works locally on your Android device. No cloud-based translation service is needed.
 
-### 3. Custom Dictionary Support
+### 3. Custom Dictionary Support & GitHub Gist Integration
 
-Use the built-in dictionary or import your own custom dictionary from a GitHub Gist or raw file URL.
+Use the built-in dictionary or import your own custom dictionary from a GitHub Gist or raw file URL with non-blocking timeouts.
 
 ### 4. Selective Application Support
 
@@ -198,7 +199,7 @@ Example:
 
 An optional debouncing feature helps prevent excessive notifications when multiple messages arrive rapidly from the same chat.
 
-### 7. Modern Material 3 Interface
+### 7. Modern Pixel-Inspired Material 3 Interface
 
 A Pixel-inspired interface with bottom navigation:
 
@@ -221,25 +222,23 @@ The transliteration workflow is designed to retain non-Bengali content and make 
 
 ---
 
-## What's New in v1.2
+## What's New in v1.21
 
-**BNotify v1.2 introduces several improvements to the application and its dictionary.**
+**BNotify v1.21 introduces major performance and reliability optimizations:**
 
-### Latest Dictionary Preloaded
+### 1. High-Performance In-Memory Dictionary (`O(1)`)
+- All 60,000+ dictionary entries are loaded instantly into an optimized in-memory hash map upon startup.
+- Guarantees absolute dictionary priority over phonetic rules with zero database lag.
 
-The latest updated Bangla-to-Latin dictionary is now included with the application.
+### 2. NFC Unicode Normalization & Punctuation Stripping
+- Automatically normalizes Bengali characters (NFC form) and strips attached punctuation (`।`, `,`, `?`, `!`, `;`) during lookups for flawless word matching.
 
-- Updated transliterations.
-- Fixed several incorrect Bangla-to-Latin entries.
-- Improved conventional and commonly used Roman Bangla spellings.
+### 3. Secure GitHub Gist Pulling
+- Added strict connection timeouts and non-blocking background coroutines for Gist dictionary pulling.
+- Hardened with input sanitization guards against RCE/injection.
 
-You no longer need to manually import the latest dictionary to benefit from these updates.
-
-### Minor Improvements
-
-- Several minor application improvements and refinements.
-- Changes to the logo background.
-- General usability and experience improvements.
+### 4. Spam Debouncing
+- Added an optional notification aggregator setting to debounce rapid messages from the same chat.
 
 ---
 
@@ -247,7 +246,7 @@ You no longer need to manually import the latest dictionary to benefit from thes
 
 ### Requirements
 
-- An Android smartphone.
+- An Android smartphone (Marshmallow / API 23+).
 - A compatible smartwatch or smart band.
 - The manufacturer's companion application installed and configured.
 - Notification access enabled for BNotify.
@@ -362,7 +361,7 @@ Keep the original applications enabled on your smartphone itself. Only adjust th
 
 ### Step 3 – Select Applications in BNotify
 
-Open the **Apps** page in BNotify.
+Open the **Apps** tab in BNotify.
 
 Select the applications whose notifications you want BNotify to process.
 
@@ -381,7 +380,7 @@ Only enable the applications you actually need.
 
 Open Settings and select your preferred transliteration mode.
 
-- **Auto:** Dictionary lookup followed by Avro phonetic fallback.
+- **Auto:** High-performance dictionary lookup followed by Avro phonetic fallback.
 - **Direct Phonetics:** Avro phonetic conversion without dictionary lookup.
 
 You can also configure the notification aggregation option and other available settings.
@@ -406,7 +405,7 @@ This mode prioritizes dictionary-based accuracy.
 
 Processing:
 
-1. Check the built-in or selected custom dictionary.
+1. Check the built-in 60k+ in-memory dictionary or selected custom dictionary.
 2. Use the corresponding Latin-script entry when a dictionary match is available.
 3. Fall back to the Avro phonetic engine for unlisted words.
 
@@ -430,10 +429,8 @@ BNotify supports custom dictionaries, allowing users to improve transliteration 
 
 You can use either:
 
-1. The default dictionary included with BNotify.
+1. The default 60k+ dictionary included with BNotify.
 2. Your own custom dictionary hosted online.
-
-**Version 1.2 already includes the latest updated dictionary.** Manual importing is optional.
 
 ### Importing a Custom Dictionary
 
@@ -519,6 +516,7 @@ BNotify is designed around local notification processing.
 - Notification text is processed on the device.
 - The core transliteration engine does not require cloud processing.
 - Custom dictionaries can be imported and stored for offline use.
+- Hardened with input sanitization guards against injection.
 - No third-party translation service is required for everyday operation.
 
 **Important:** Android notification access is a sensitive permission. BNotify needs this permission to perform its primary function. Users should only grant it to applications they trust.
